@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--тег предоставляет информацию о области просмотра-->
+    <link rel="shortcut icon" href="1_1.PNG" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!--Привязка стилей-->
+    <link rel="stylesheet" type="text/css" href="Lab_2_PC.css" />
+    <!---->
+    <title>Путешествие по России</title>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse sticky-top"> <!--базовый класс Bootstrap, который создает навигационную панель-->
+        <div class="container"> <!-- класс Bootstrap, который создает контейнер для контента-->
+            <img class="col-md-1 col-2" src="1_1.PNG" />
+            <!--делает элемент адаптивным, меняя его ширину в зависимости от размера экрана-->
+            <div class="navbar-header col-8">
+                <h1>Путешествие по России</h1>
+            </div>
+            <div class="nav navbar-nav col-2">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar navbar-inverse">
+        <div class="container">
+            <a class="link" data-target="section1" href="#section1">Приветствие</a>
+            <!--используется JavaScript для определения, какой раздел страницы нужно показать-->
+            <a class="link" data-target="section2" href="#section2">МОСКВА</a>
+            <a class="link" data-target="section3" href="#section3">ЕКАТЕРИНБУРГ</a>
+            <a class="link" data-target="section4" href="#section4">САНКТ-ПЕТЕРБУРГ</a>
+            <a class="link" data-target="section5" href="#section5">Опрос</a>
+
+        </div>
+    </div>
+    <main>
+        <div id="section1" class="section">
+            <h2>Вперёд по России</h2>
+            <p>
+                Приготовьтесь к захватывающим открытиям, невероятным пейзажам и знакомству с богатой культурой нашей
+                Родины.
+            <aside onclick="showPopup('Вы готовы к путешествию по сайту?')"> Планируете поездку? "Путешествие по России"
+                - ваш надежный помощник! </aside>
+            </p>
+        </div>
+        <div id="section2" class="section">
+            <h2>МОСКВА</h2>
+            <p>
+                Москва – сокровищница достопримечательностей! От величественного Кремля и Красной площади до живописных
+                парков
+                и старинных усадеб,столица России предлагает бесчисленное множество мест, которые стоит увидеть.
+                Приготовьтесь
+                к захватывающему путешествию по главным символам Москвы, где каждый памятник – это страница богатой
+                истории и культуры.
+            <aside onclick="showPopup('Приятного просмотра')">Для вас мы подготовили мини экскурсию</aside>
+            </p>
+            <video class="col-11" controls> <!--элемент будет занимать 11/12 (почти всю) ширины контейнера-->
+                <source src="Lab_1_2.mp4" type="audio/mp4" />
+            </video>
+        </div>
+
+        <div id="section3" class="section">
+            <h2>ЕКАТЕРИНБУРГ</h2>
+            <p>
+                Екатеринбург – город, богатый достопримечательностями. Здесь вы сможете увидеть знаменитый
+                Храм-на-Крови, возведенный
+                на месте расстрела царской семьи, посетить Екатеринбургский музей изобразительных искусств с его богатой
+                коллекцией,
+                прогуляться по исторической Плотинке и ощутить себя на границе двух частей света.
+            <aside onclick="showPopup('Приятного прослушивания')">Ловите плейлист с музыкой для полного погружения в
+                красоты города</aside>
+            </p>
+            <ul>
+                <audio src="Lab_1_3.mp3" controls></audio><br>
+                <audio src="Lab_1_4.mp3" controls></audio><br>
+                <audio src="Lab_1_5.mp3" controls></audio><br>
+            </ul>
+        </div>
+
+        <div id="section4" class="section">
+            <h2>САНКТ-ПЕТЕРБУРГ</h2>
+            <p>
+                Полезные советы
+            <ul>
+                <li>Лучшее время для посещения - белые ночи (май-июнь).</li>
+                <li>Обязательно посетите развод мостов.</li>
+                <li>Купите карту города или скачайте приложение с картой.</li>
+            </ul>
+            </p>
+            <h2>Посещение достопримечательностей в Санкт-Петербурге</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th onclick="toggleHighlight(0)">№</th>
+                        <th onclick="toggleHighlight(1)">Название достопримечательности</th>
+                        <th onclick="toggleHighlight(2)">Дата посещения
+                        <th onclick="toggleHighlight(2)">Время посещения</th>
+                        <th onclick="toggleHighlight(3)">Стоимость билета (руб.)</th>
+                        <th onclick="toggleHighlight(4)">Впечатления (кратко)</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Эрмитаж</td>
+                        <td>2024-02-29</td>
+                        <td>11:00-14:00</td>
+                        <td>500</td>
+                        <td>Потрясающе! Огромная коллекция.</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Петропавловская крепость</td>
+                        <td>2024-03-01</td>
+                        <td>10:00-13:00</td>
+                        <td>350</td>
+                        <td>Интересно. Вид на Неву.</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Исаакиевский собор</td>
+                        <td>2024-03-02</td>
+                        <td>14:00-16:00</td>
+                        <td>400</td>
+                        <td>Впечатляет размерами.</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Русский музей</td>
+                        <td>2024-03-03</td>
+                        <td>12:00-15:00</td>
+                        <td>450</td>
+                        <td>Русское искусство во всем великолепии</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Петергоф</td>
+                        <td>2024-03-04</td>
+                        <td>10:00-17:00</td>
+                        <td>1000 (парк)</td>
+                        <td>Фонтаны! Прекрасный парк.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <figure>
+
+                <img src="Lab_1_6.png" alt="Дворцовая площадь" width="320" height="300">
+                <img src="Lab_1_7.jpg" alt="Невский проспект" width="320" height="300">
+                <img src="Lab_1_8.jpg" alt="Разводные мосты" width="320" height="300"><br>
+            </figure>
+        </div>
+
+        <div id="section5" class="section">
+            <h2>Опрос для посетителей</h2>
+            <form id="myForm" onsubmit="return submitForm(event)">
+                <label>Фамилия и Имя</label>
+                <input class="col-sm-3 col-2" type="text" pattern="[А-Яа-яЁё]" maxlength="15" placeholder="Имя" />
+                <input class="col-sm-3 col-2" type="text" pattern="[А-Яа-яЁё]" maxlength="15" placeholder="Фамилия" />
+                <br>
+                <label>Ваш возраст</label>
+                <input class="col-sm-3 col-2" type="number" min="0" max="100" />
+
+                <label> Дата рождения</label>
+                <input class="col-2" type="number" min="1" max="31" placeholder="чч" />
+                <input class="col-2" type="number" min="1" max="12" placeholder="мм" />
+                <input class="col-2" type="number" min="1920" max="2024" placeholder="гггг" />
+                <br>
+                <label>Номер телефона</label>
+                <input class="col-4" type="text" maxlength="16" placeholder="8-XXX-XXX-XX-XX"
+                    pattern="8-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" />
+                <br>
+                <label>Email</label>
+                <input class="col-sm-3 col-2" type="email" maxlength="50" />
+                <br>
+                <label>Ссылка на социальные сети</label>
+                <input class="col-sm-3 col-2" type="url" id="url-input" maxlength="50" />
+                <br>
+                <label>Цвет настрояния:</label>
+                <input class="col-sm-3 col-2" type="color" />
+                <br>
+                <label>Выберите элемент из списка:</label>
+                <input class="col-sm-3 col-2" list="datalist-choice" />
+                <datalist>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="а"></option>
+                    <option value="б"></option>
+                    <option value="3"></option>
+                </datalist><br><br>
+
+                <textarea maxlength="500" placeholder="Комментарий"></textarea>
+                <br><input class="button col-4" type="submit" />
+                <input class="button col-4" type="reset" onclick="return confirmReset()" />
+            </form>
+        </div>
+    </main>
+    <div class="container foot col-12">
+        <a class="" href="">Пользовательское соглашение</a><br>
+        <a class="" href="">О разработчике</a>
+    </div>
+    <script src="Lab_3.js"></script>
+</body>
+
+</html>
