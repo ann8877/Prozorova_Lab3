@@ -4,29 +4,34 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--тег предоставляет информацию о области просмотра-->
     <link rel="shortcut icon" href="1_1.PNG" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <!--Привязка стилей-->
+    <script src="1.js"></script>
+    <style>
+        #logo {
+            transition: opacity 0.5s ease;
+            /* Анимация изменения прозрачности */
+            opacity: 1;
+            /* Начальная прозрачность */
+        }
+    </style>
     <link rel="stylesheet" type="text/css" href="Lab_2_PC.css" />
-    <!---->
     <title>Путешествие по России</title>
 </head>
 
 <body>
-    <div class="navbar navbar-inverse sticky-top"> <!--базовый класс Bootstrap, который создает навигационную панель-->
-        <div class="container"> <!-- класс Bootstrap, который создает контейнер для контента-->
+    <div class="navbar navbar-inverse sticky-top">
+        <div class="container">
             <img class="col-md-1 col-2" src="1_1.PNG" />
-            <!--делает элемент адаптивным, меняя его ширину в зависимости от размера экрана-->
             <div class="navbar-header col-8">
                 <h1>Путешествие по России</h1>
             </div>
             <div class="nav navbar-nav col-2">
-
             </div>
         </div>
     </div>
@@ -34,58 +39,57 @@
     <div class="navbar navbar-inverse">
         <div class="container">
             <a class="link" data-target="section1" href="#section1">Приветствие</a>
-            <!--используется JavaScript для определения, какой раздел страницы нужно показать-->
             <a class="link" data-target="section2" href="#section2">МОСКВА</a>
             <a class="link" data-target="section3" href="#section3">ЕКАТЕРИНБУРГ</a>
             <a class="link" data-target="section4" href="#section4">САНКТ-ПЕТЕРБУРГ</a>
             <a class="link" data-target="section5" href="#section5">Опрос</a>
-
         </div>
     </div>
+
     <main>
-        <div id="section1" class="section">
+        <article id="section1" class="section">
             <h2>Вперёд по России</h2>
-            <p>
-                Приготовьтесь к захватывающим открытиям, невероятным пейзажам и знакомству с богатой культурой нашей
-                Родины.
-            <aside onclick="showPopup('Вы готовы к путешествию по сайту?')"> Планируете поездку? "Путешествие по России"
-                - ваш надежный помощник! </aside>
-            </p>
-        </div>
-        <div id="section2" class="section">
+            <section>
+                <p>Приготовьтесь к захватывающим открытиям, невероятным пейзажам и знакомству с богатой культурой нашей
+                    Родины.</p>
+                <aside>Планируете поездку? "Путешествие по России" - ваш надежный помощник!</aside>
+            </section>
+            <section>
+                <p>Мы предлагаем самые интересные маршруты и полезные советы для вашего путешествия.</p>
+            </section>
+        </article>
+
+        <article id="section2" class="section">
             <h2>МОСКВА</h2>
-            <p>
-                Москва – сокровищница достопримечательностей! От величественного Кремля и Красной площади до живописных
-                парков
-                и старинных усадеб,столица России предлагает бесчисленное множество мест, которые стоит увидеть.
-                Приготовьтесь
-                к захватывающему путешествию по главным символам Москвы, где каждый памятник – это страница богатой
-                истории и культуры.
-            <aside onclick="showPopup('Приятного просмотра')">Для вас мы подготовили мини экскурсию</aside>
-            </p>
-            <video class="col-11" controls> <!--элемент будет занимать 11/12 (почти всю) ширины контейнера-->
-                <source src="Lab_1_2.mp4" type="audio/mp4" />
-            </video>
-        </div>
+            <section>
+                <p>Москва – сокровищница достопримечательностей! От величественного Кремля и Красной площади до
+                    живописных
+                    парков и старинных усадеб.</p>
+            </section>
+            <section>
+                <video class="col-11" controls>
+                    <source src="Lab_1_2.mp4" type="audio/mp4" />
+                </video>
+                <aside>Для вас мы подготовили мини экскурсию</aside>
+            </section>
+        </article>
 
-        <div id="section3" class="section">
+        <article id="section3" class="section">
             <h2>ЕКАТЕРИНБУРГ</h2>
-            <p>
-                Екатеринбург – город, богатый достопримечательностями. Здесь вы сможете увидеть знаменитый
-                Храм-на-Крови, возведенный
-                на месте расстрела царской семьи, посетить Екатеринбургский музей изобразительных искусств с его богатой
-                коллекцией,
-                прогуляться по исторической Плотинке и ощутить себя на границе двух частей света.
-            <aside onclick="showPopup('Приятного прослушивания')">Ловите плейлист с музыкой для полного погружения в
-                красоты города</aside>
-            </p>
-            <ul>
-                <audio src="Lab_1_3.mp3" controls></audio><br>
-                <audio src="Lab_1_4.mp3" controls></audio><br>
-                <audio src="Lab_1_5.mp3" controls></audio><br>
-            </ul>
-        </div>
-
+            <section>
+                <p>Екатеринбург – город, богатый достопримечательностями. Здесь вы сможете увидеть знаменитый
+                    Храм-на-Крови.
+                </p>
+            </section>
+            <section>
+                <ul>
+                    <audio src="Lab_1_3.mp3" controls></audio><br>
+                    <audio src="Lab_1_4.mp3" controls></audio><br>
+                    <audio src="Lab_1_5.mp3" controls></audio><br>
+                </ul>
+                <aside>Ловите плейлист с музыкой для полного погружения в красоты города</aside>
+            </section>
+        </article>
         <div id="section4" class="section">
             <h2>САНКТ-ПЕТЕРБУРГ</h2>
             <p>
@@ -102,10 +106,10 @@
                     <tr>
                         <th onclick="toggleHighlight(0)">№</th>
                         <th onclick="toggleHighlight(1)">Название достопримечательности</th>
-                        <th onclick="toggleHighlight(2)">Дата посещения
-                        <th onclick="toggleHighlight(2)">Время посещения</th>
-                        <th onclick="toggleHighlight(3)">Стоимость билета (руб.)</th>
-                        <th onclick="toggleHighlight(4)">Впечатления (кратко)</th>
+                        <th onclick="toggleHighlight(2)">Дата посещения </th>
+                        <th onclick="toggleHighlight(3)">Время посещения</th>
+                        <th onclick="toggleHighlight(4)">Стоимость билета (руб.)</th>
+                        <th onclick="toggleHighlight(5)">Впечатления (кратко)</th>
                     </tr>
 
                 </thead>
@@ -164,8 +168,8 @@
             <h2>Опрос для посетителей</h2>
             <form id="myForm" onsubmit="return submitForm(event)">
                 <label>Фамилия и Имя</label>
-                <input class="col-sm-3 col-2" type="text" pattern="[А-Яа-яЁё]" maxlength="15" placeholder="Имя" />
-                <input class="col-sm-3 col-2" type="text" pattern="[А-Яа-яЁё]" maxlength="15" placeholder="Фамилия" />
+                <input class="col-sm-3 col-2" type="text" pattern="[А-Яа-яЁё]+" maxlength="15" placeholder="Имя" />
+                <input class="col-sm-3 col-2" type="text" pattern="[А-Яа-яЁё]+" maxlength="15" placeholder="Фамилия" />
                 <br>
                 <label>Ваш возраст</label>
                 <input class="col-sm-3 col-2" type="number" min="0" max="100" />
@@ -209,6 +213,24 @@
         <a class="" href="">О разработчике</a>
     </div>
     <script src="Lab_3.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('aside').centerAndScale({ duration: 700, scaleFactor: 1.5 });
+        });
+    </script>
+    <script>
+        $('#logo').hover(
+            function () {
+                $(this).animate({ opacity: 0 }, 250, function () { // Анимация затемнения
+                    $(this).animate({ opacity: 0.5 }, 250); // Анимация появления
+                });
+            },
+            function () {
+                $(this).animate({ opacity: 1 }, 250); // Анимация возврата к исходной прозрачности
+            }
+        );
+    </script>
+
 </body>
 
 </html>
